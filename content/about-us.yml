@@ -1,0 +1,60 @@
+title: About Us
+permalink: 
+seo:
+  page_description: >-
+    We believe that a good email marketing strategy is the key to growth. So
+    we’re helping you grow your business with tools and resources that make
+    email marketing easy.
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+content_blocks:
+  - _block_name: section/about
+    id: about
+    section_label: ABOUT US
+    title: ABOUT<br> SHIAR TRENDZ
+    description: >-
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      <br><br>
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.
+      <br><br>
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    banner: /images/banner-about.png
+    banner_alt: banner
+    button:
+      text: OUR SERVICE
+      url: /services
+      background: "#000"
+      text_color: "#fff"
+
+  
+  - _block_name: section/our-staff
+    id: our-staff
+    section_label: OUR STAFF
+    title: WE HAVE A PROFESSIONAL TEAM TO SERVE YOU.
+    staffs: 
+      - name: THOMAS
+        services:
+          - text: Hair Stylish
+          - text: Hair colorist
+          - text: Hair designer
+        image: /images/banner-about.png
+        image_alt: banner
+      - name: JOIN SMITH
+        services:
+          - text: Hair Stylish
+          - text: Hair colorist
+          - text: Hair designer
+        image: /images/staff-2.png
+        image_alt: banner
+      - name: JESSICA
+        services:
+          - text: Hair Stylish
+          - text: Hair colorist
+          - text: Hair designer
+        image: /images/banner-about.png
+        image_alt: banner

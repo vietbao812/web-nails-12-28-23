@@ -1,0 +1,45 @@
+title: Booking
+permalink: 
+seo:
+  page_description: >-
+    We believe that a good email marketing strategy is the key to growth. So
+    we’re helping you grow your business with tools and resources that make
+    email marketing easy.
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+content_blocks:
+  - _block_name: section/banner-booking
+    background: "#000"
+    banner: /images/banner.png
+    banner_alt: /images/banner.png
+
+
+  - _block_name: section/contact
+    background: "#000"
+    text_color: "#fff"
+    background_box: "#fff"
+    contact: 
+      - icon: /images/location.png
+        value: 11011 Richmond Ave, Ste 900, Houston, TX 77042
+      - icon: /images/headphone.png
+        value: 832-968-6668
+      - icon: /images/sms.png
+        value: contact@fastboy.net
+
+
+  - _block_name: section/booking
+    background: "#000"
+    text_color: "#fff"
+    booking: 
+      title: BOOKING NOW
+      subtitle: Let’s deisign your own style
+    appointment: APPOINTMENT DETAIL
+
+
+  - _block_name: section/map
+    background: "#000"
+    map: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.3539319042645!2d-95.57140404415983!3d29.72822039379335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640ddc6ed681049%3A0x74ace03ed50728e8!2sFastboy%20Marketing%20%26%20Construction!5e0!3m2!1svi!2s!4v1704442145710!5m2!1svi!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

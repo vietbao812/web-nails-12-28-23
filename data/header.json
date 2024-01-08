@@ -1,0 +1,35 @@
+{
+  "logo": "/images/logo.png",
+  "line": "/images/line.png",
+  "backgroundService": "/images/bg-service.png",
+  "booking": {
+    "url": "/booking",
+    "text": "LET’S BOOKING"
+  },
+  "nav": [
+    {
+      "link": "/",
+      "text": "Home"
+    },
+    {
+      "link": "/about-us",
+      "text": "About Us"
+    },
+    {
+      "link": "/services",
+      "text": "Service"
+    },
+    {
+      "link": "/gallery",
+      "text": "Gallery"
+    }
+  ],
+  "_inputs": {
+    "logo": {
+      "type": "image"
+    },
+    "background": {
+      "type": "color"
+    }
+  }
+}

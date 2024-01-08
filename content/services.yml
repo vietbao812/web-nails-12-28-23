@@ -1,0 +1,104 @@
+title: Services
+permalink: 
+seo:
+  page_description: >-
+    We believe that a good email marketing strategy is the key to growth. So
+    we’re helping you grow your business with tools and resources that make
+    email marketing easy.
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+content_blocks:
+  - _block_name: section/service
+    service: 
+      - name: HAIR DESIGN
+        banner: /images/gallery-1.png
+        banner_alt: Hair Design
+        service_detail:
+          - service_name: Hair design
+            price: $50
+            image: /images/gallery-1.png
+            image_alt: Hair Design
+          - service_name: Side part
+            price: $60
+            image: /images/gallery-2.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $50
+            image: /images/gallery-3.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $55
+            image: /images/gallery-4.png
+            image_alt: Hair Design
+          - service_name: Side part
+            price: $60
+            image: /images/gallery-5.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $50
+            image: /images/gallery-6.png
+            image_alt: Hair Design
+      - name: HAIR COLORIST
+        banner: /images/gallery-2.png
+        banner_alt: Hair Colorist
+        service_detail:
+          - service_name: Hair design
+            price: $50
+            image: /images/gallery-1.png
+            image_alt: Hair Design
+          - service_name: Side part
+            price: $60
+            image: /images/gallery-2.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $50
+            image: /images/gallery-3.png
+            image_alt: Hair Design
+      - name: TRIMMING
+        banner: /images/gallery-3.png
+        banner_alt: Trimming
+        service_detail:
+          - service_name: Hair design
+            price: $50
+            image: /images/gallery-1.png
+            image_alt: Hair Design
+          - service_name: Side part
+            price: $60
+            image: /images/gallery-2.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $50
+            image: /images/gallery-3.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $55
+            image: /images/gallery-4.png
+            image_alt: Hair Design
+      - name: CHILDREN HAIR CUT
+        banner: /images/gallery-4.png
+        banner_alt: Children Hair Cut
+        service_detail:
+          - service_name: Hair design
+            price: $50
+            image: /images/gallery-1.png
+            image_alt: Hair Design
+          - service_name: Side part
+            price: $60
+            image: /images/gallery-2.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $50
+            image: /images/gallery-3.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $55
+            image: /images/gallery-4.png
+            image_alt: Hair Design
+          - service_name: Undercut
+            price: $55
+            image: /images/gallery-4.png
+            image_alt: Hair Design

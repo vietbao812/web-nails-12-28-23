@@ -1,0 +1,27 @@
+{
+    "BaseURL": "http://example.org",
+    "site_title": "Baber Shop",
+    "favicon_icon": "/favicon.ico",
+    "favicon_image": "/favicon.png",
+    "description": "A polished, marketing website template built with Eleventy",
+    "twitter_image": "/images/feature/feature-hero-two.png",
+    "twitter_site": "@twitter_site",
+    "image": "/images/feature/feature-hero.png",
+    "_inputs": {
+        "twitter_site": {
+            "type": "twitter"
+        },
+        "favicon_icon": {
+            "type": "image"
+        },
+        "favicon_image": {
+            "type": "image"
+        },
+        "twitter_image": {
+            "type": "image"
+        },
+        "image": {
+            "type": "image"
+        }
+    }
+}

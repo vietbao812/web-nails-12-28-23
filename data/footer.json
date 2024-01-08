@@ -1,0 +1,39 @@
+{
+  "title": "CONTACT US",
+  "background": "#000000",
+  "id": "contact",
+  "follow": {
+    "label": "FOLLOW US:",
+    "value": [
+      {
+        "link": "https://www.facebook.com",
+        "icon": "/images/icon-facebook.png"
+      },
+      {
+        "link": "https://twitter.com",
+        "icon": "/images/icon-twitter.png"
+      },
+      {
+        "link": "https://www.linkedin.com",
+        "icon": "/images/icon-linkedin.png"
+      },
+      {
+        "link": "https://www.instagram.com",
+        "icon": "/images/icon-google.png"
+      }
+    ]
+  },
+  "buttonToTop": {
+    "label": "BACK TO TOP",
+    "icon": "/images/arrow-up.png"
+  },
+  "copy_right": "© 2023 Fastboy Marketing",
+  "_inputs": {
+    "label": {
+      "type": "text"
+    },
+    "background": {
+      "type": "color"
+    }
+  }
+}
