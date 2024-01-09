@@ -1,0 +1,45 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Home Banner Section
+  description: Home Banner Section
+  icon: "cottage"
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  id: home-banner
+  banner: /images/banner.png
+  banner_alt: /images/banner.png
+  button:
+    text: DISCOVER US
+    url: /about-us
+    background: "#fff"
+    text_color: "#000"
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  id:
+    label: ID section
+    type: text
+  banner:
+    type: image
+    label: Image
+  banner_alt:
+    type: text
+    label: Image Alt
+  button[*].text:
+    label: text button
+    type: text
+  button[*].url:
+    label: url button
+    type: url
+  button[*].background:
+    label: background button
+    type: color
+  button[*].text_color:
+    label: text color button
+    type: color
