@@ -25,7 +25,7 @@
           <h4 class="sm:hidden block font-medium text-xl mb-2 uppercase">{{ block.booking.title_mobile }}</h4>
           <div class="w-full sm:flex-row flex flex-col gap-[12px] sm:gap-[16px] h-[60px]">
             <div class="sm:w-1/2 w-full h-full">
-              <UPopover :popper="{ placement: 'bottom-start' }" class="custom_date ">
+              <UPopover :popper="{ placement: 'bottom-start' }" class="custom_date overflow-hidden">
                 <UButton icon="i-heroicons-calendar-days-20-solid" :label="label" />
                 <template #panel="{ closeDatePicker }">
                   <LazyDatePicker v-model="date" @close="closeDatePicker"/>
@@ -41,7 +41,7 @@
               class="custom_form sm:w-1/2 w-full"
             />
           </div>
-          <div class="w-full h-[60px]">
+          <div class="w-full h-[60px] sm:mt-0 mt-[60px]">
             <USelectMenu
               v-model="service"
               :options="services"
@@ -154,11 +154,16 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-[20px]">
+        <div v-if="loading" class="loading-dots pt-10">
+          <div class="loading-dots--dot custom_dot" />
+          <div class="loading-dots--dot custom_dot" />
+          <div class="loading-dots--dot custom_dot" />
+        </div>
+        <div v-else class="flex flex-col gap-[20px]">
           <h4 class="sm:hidden block font-medium text-xl mb-2 uppercase">{{ block.appointment.title_mobile }}</h4>
           <div class="flex flex-col gap-[19px]">
             <div class="flex flex-col gap-[19px]">
-              <div class="flex gap-[12px]">
+              <div class="sm:flex-row flex flex-col gap-[12px]">
                 <div class="rounded-full sm:bg-secondary bg-primary border-secondary border-[1px] py-[15px] px-[50px] h-[60px] sm:w-2/3 w-full">
                   <p v-if="date" class="sm:text-anchor text-secondary text-[24px] h-full whitespace-nowrap overflow-hidden flex justify-center items-center">
                     {{ label }}
@@ -265,7 +270,6 @@ interface Props {
 defineProps<Props>()
 const openModalAdd = ref(false);
 const openModalListAdd = ref(false);
-
 
 const date = ref(new Date());
 
@@ -382,6 +386,23 @@ const submitForm = () => {
 const removeSelectedService = (index:any) => {
   selectedServices.value.splice(index, 1);
 };
+const loading = ref(false);
+
+watch([selectedService, serviceChecked, selectedStaff, staffChecked, label, activeTime], async () => {
+  loading.value = true;
+
+  try {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    loading.value = false;
+
+    console.log('Data loaded successfully!');
+  } catch (error) {
+    console.error('Error loading data:', error);
+
+    loading.value = false;
+  }
+});
 
 </script>
 
@@ -418,6 +439,9 @@ const removeSelectedService = (index:any) => {
 //     background-color: var(--color-anchor);
 //   }
 // }
+.custom_dot {
+  background-color: var(--color-secondary);
+}
 .custom_input {
     color: rgba(0, 0, 0, 0.20);
     background: #FFF;
