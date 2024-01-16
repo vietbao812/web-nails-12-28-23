@@ -1,0 +1,126 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Service Section
+  description: Service Section
+  icon: "cottage"
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  service:
+    - name: HAIR DESIGN
+      banner: /images/gallery-1.png
+      banner_alt: Hair Design
+      service_detail:
+        - service_name: Hair design
+          price: $50
+          image: /images/gallery-1.png
+          image_alt: Hair Design
+        - service_name: Side part
+          price: $60
+          image: /images/gallery-2.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $50
+          image: /images/gallery-3.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $55
+          image: /images/gallery-4.png
+          image_alt: Hair Design
+        - service_name: Side part
+          price: $60
+          image: /images/gallery-5.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $50
+          image: /images/gallery-6.png
+          image_alt: Hair Design
+    - name: HAIR COLORIST
+      banner: /images/gallery-2.png
+      banner_alt: Hair Colorist
+      service_detail:
+        - service_name: Hair design
+          price: $50
+          image: /images/gallery-1.png
+          image_alt: Hair Design
+        - service_name: Side part
+          price: $60
+          image: /images/gallery-2.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $50
+          image: /images/gallery-3.png
+          image_alt: Hair Design
+    - name: TRIMMING
+      banner: /images/gallery-3.png
+      banner_alt: Trimming
+      service_detail:
+        - service_name: Hair design
+          price: $50
+          image: /images/gallery-1.png
+          image_alt: Hair Design
+        - service_name: Side part
+          price: $60
+          image: /images/gallery-2.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $50
+          image: /images/gallery-3.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $55
+          image: /images/gallery-4.png
+          image_alt: Hair Design
+    - name: CHILDREN HAIR CUT
+      banner: /images/gallery-4.png
+      banner_alt: Children Hair Cut
+      service_detail:
+        - service_name: Hair design
+          price: $50
+          image: /images/gallery-1.png
+          image_alt: Hair Design
+        - service_name: Side part
+          price: $60
+          image: /images/gallery-2.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $50
+          image: /images/gallery-3.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $55
+          image: /images/gallery-4.png
+          image_alt: Hair Design
+        - service_name: Undercut
+          price: $55
+          image: /images/gallery-4.png
+          image_alt: Hair Design
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  service[*].name:
+    label: name service
+    type: text
+  service[*].banner:
+    label: image
+    type: image
+  service[*].banner_alt:
+    label: image alt
+    type: text
+  service[*].service_detail[*].service_name:
+    label: name service detail
+    type: text
+  service[*].service_detail[*].price:
+    label: price service detail
+    type: text
+  service[*].service_detail[*].image:
+    label: image service detail
+    type: image
+  service[*].service_detail[*].image_alt:
+    label: image alt service detail
+    type: text

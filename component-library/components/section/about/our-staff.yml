@@ -1,0 +1,62 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Our Staff Section
+  description: Our Staff Section
+  icon: "cottage"
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  id: our-staff
+  section_label: OUR STAFF
+  title: WE HAVE A PROFESSIONAL TEAM TO SERVE YOU.
+  staffs:
+    - name: THOMAS
+      services:
+        - text: Hair Stylish
+        - text: Hair colorist
+        - text: Hair designer
+      image: /images/banner-about.png
+      image_alt: banner
+    - name: JOIN SMITH
+      services:
+        - text: Hair Stylish
+        - text: Hair colorist
+        - text: Hair designer
+      image: /images/staff-2.png
+      image_alt: banner
+    - name: JESSICA
+      services:
+        - text: Hair Stylish
+        - text: Hair colorist
+        - text: Hair designer
+      image: /images/banner-about.png
+      image_alt: banner
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  id:
+    label: ID section
+    type: text
+  title:
+    label: title
+    type: markdown
+  section_label:
+    label: section label
+    type: text
+  staffs[*].name:
+    label: name staff
+    type: text
+  staffs[*].services:
+    label: services staffs
+    type: text
+  staffs[*].image:
+    label: image staffs
+    type: image
+  staffs[*].image_alt:
+    label: image alt staffs
+    type: text

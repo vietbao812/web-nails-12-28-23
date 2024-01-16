@@ -1,5 +1,5 @@
 title: Services
-permalink: 
+permalink:
 seo:
   page_description: >-
     We believe that a good email marketing strategy is the key to growth. So
@@ -13,7 +13,7 @@ seo:
   no_index: false
 content_blocks:
   - _block_name: section/service
-    service: 
+    service:
       - name: HAIR DESIGN
         banner: /images/gallery-1.png
         banner_alt: Hair Design

@@ -1,0 +1,89 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Booking Section
+  description: Booking Section
+  icon: "cottage"
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  background: "#000"
+  text_color: "#fff"
+  booking:
+    title: BOOKING NOW
+    title_mobile: Booking Appointment
+    subtitle: Let’s deisign your own style
+    add_service: Add more service
+    label_time:
+      morning: Morning
+      afternoon: Afternoon
+    list_time_morning:
+      - time: 10:00 am
+      - time: 10:30 am
+      - time: 11:00 am
+      - time: 11:30 am
+    list_time_afternoon:
+      - time: 12:00 am
+      - time: 12:30 am
+      - time: 13:00 am
+      - time: 13:30 am
+      - time: 14:00 am
+      - time: 14:30 am
+      - time: 15:00 am
+      - time: 15:30 am
+      - time: 16:00 am
+      - time: 16:30 am
+      - time: 17:00 am
+      - time: 17:30 am
+      - time: 18:00 am
+      - time: 18:30 am
+      - time: 19:00 am
+  appointment:
+    title: APPOINTMENT DETAIL
+    title_mobile: YOUR INFOMATION
+    button: CONFIRM APPOINTMENT
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  text_color:
+    label: text color
+    type: color
+  background:
+    label: background
+    type: color
+  booking[*].title:
+    label: text booking
+    type: text
+  booking[*].title_mobile:
+    label: text mobile booking
+    type: text
+  booking[*].subtitle:
+    label: text subtitle booking
+    type: text
+  booking[*].add_service:
+    label: text add service booking
+    type: text
+  booking[*].label_time:
+    label: text label time booking
+    type: text
+  booking[*].list_time_morning:
+    label: text list time morning booking
+    type: text
+  booking[*].list_time_afternoon:
+    label: text list time afternoon booking
+    type: text
+  appointment[*].title:
+    label: text appointment
+    type: text
+  appointment[*].title_mobile:
+    label: text mobile appointment
+    type: text
+  appointment[*].button:
+    label: text button appointment
+    type: text
+
+

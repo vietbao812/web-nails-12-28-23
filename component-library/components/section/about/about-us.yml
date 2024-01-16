@@ -1,0 +1,64 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: About Us Section
+  description:  About Us Section
+  icon: "cottage"
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  id: about
+  section_label: ABOUT US
+  title: ABOUT<br> SHIAR TRENDZ
+  description: >-
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    <br><br>
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.
+    <br><br>
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+  banner: /images/banner-about.png
+  banner_alt: banner
+  button:
+    text: OUR SERVICE
+    url: /services
+    background: "#000"
+    text_color: "#fff"
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  id:
+    label: ID section
+    type: text
+  title:
+    label: title
+    type: markdown
+  section_label:
+    label: section label
+    type: text
+  description:
+    label: description
+    type: markdown
+  banner:
+    label: image
+    type: image
+  banner_alt:
+    label: alt image
+    type: text
+  button[*].text:
+    label: text button
+    type: text
+  button[*].url:
+    label: url button
+    type: url
+  button[*].background:
+    label: background button
+    type: color
+  button[*].text_color:
+    label: text color button
+    type: color
+

@@ -1,5 +1,5 @@
 title: Booking
-permalink: 
+permalink:
 seo:
   page_description: >-
     We believe that a good email marketing strategy is the key to growth. So
@@ -17,12 +17,11 @@ content_blocks:
     banner: /images/banner.png
     banner_alt: /images/banner.png
 
-
   - _block_name: section/contact
     background: "#000"
     text_color: "#fff"
     background_box: "#fff"
-    contact: 
+    contact:
       - icon: /images/location.png
         value: 11011 Richmond Ave, Ste 900, Houston, TX 77042
       - icon: /images/headphone.png
@@ -30,15 +29,42 @@ content_blocks:
       - icon: /images/sms.png
         value: contact@fastboy.net
 
-
   - _block_name: section/booking
     background: "#000"
     text_color: "#fff"
-    booking: 
+    booking:
       title: BOOKING NOW
+      title_mobile: Booking Appointment
       subtitle: Let’s deisign your own style
-    appointment: APPOINTMENT DETAIL
-
+      add_service: Add more service
+      label_time:
+        morning: Morning
+        afternoon: Afternoon
+      list_time_morning:
+        - time: 10:00 am
+        - time: 10:30 am
+        - time: 11:00 am
+        - time: 11:30 am
+      list_time_afternoon:
+        - time: 12:00 am
+        - time: 12:30 am
+        - time: 13:00 am
+        - time: 13:30 am
+        - time: 14:00 am
+        - time: 14:30 am
+        - time: 15:00 am
+        - time: 15:30 am
+        - time: 16:00 am
+        - time: 16:30 am
+        - time: 17:00 am
+        - time: 17:30 am
+        - time: 18:00 am
+        - time: 18:30 am
+        - time: 19:00 am
+    appointment:
+      title: APPOINTMENT DETAIL
+      title_mobile: YOUR INFOMATION
+      button: CONFIRM APPOINTMENT
 
   - _block_name: section/map
     background: "#000"
