@@ -22,13 +22,15 @@
       </div>
       <div class="text-secondary grid sm:grid-cols-2 grid-cols-1 gap-8 h-full">
         <div class="flex flex-col gap-[16px]">
-          <h4 class="sm:hidden block font-medium text-xl mb-2 uppercase">{{ block.booking.title_mobile }}</h4>
+          <h4 class="sm:hidden block font-medium text-xl mb-2 uppercase">
+            {{ block.booking.title_mobile }}
+          </h4>
           <div class="w-full sm:flex-row flex flex-col gap-[12px] sm:gap-[16px] h-[60px]">
             <div class="sm:w-1/2 w-full h-full">
               <UPopover :popper="{ placement: 'bottom-start' }" class="custom_date overflow-hidden">
                 <UButton icon="i-heroicons-calendar-days-20-solid" :label="label" />
                 <template #panel="{ closeDatePicker }">
-                  <LazyDatePicker v-model="date" @close="closeDatePicker"/>
+                  <LazyDatePicker v-model="date" @close="closeDatePicker" />
                 </template>
               </UPopover>
             </div>
@@ -52,11 +54,11 @@
             />
           </div>
           <div
-            @click="openModalAdd = true"
             class="flex gap-[16px] py-[18px] px-[25px] cursor-pointer"
+            @click="openModalAdd = true"
           >
             <img src="/images/add-circle.png" alt="" class="object-cover">
-            <span>{{block.booking.add_service}}</span>
+            <span>{{ block.booking.add_service }}</span>
             <div class="lg:hidden block">
               <UModal
                 v-model="openModalAdd"
@@ -71,23 +73,25 @@
                 >
                   <div class="flex items-center justify-end">
                     <UButton
-                        color="gray"
-                        variant="ghost"
-                        icon="i-heroicons-x-mark-20-solid"
-                        class="-my-1"
-                        @click="openModalAdd = false"
+                      color="gray"
+                      variant="ghost"
+                      icon="i-heroicons-x-mark-20-solid"
+                      class="-my-1"
+                      @click="openModalAdd = false"
                     />
                   </div>
                   <div
                     class="flex flex-col gap-4 justify-center items-center pb-10"
                   >
-                    <h2 class="text-anchor uppercase text-2xl">{{block.booking.add_service}}</h2>
+                    <h2 class="text-anchor uppercase text-2xl">
+                      {{ block.booking.add_service }}
+                    </h2>
                     <form class="w-full" @submit.prevent="submitForm">
                       <div class="w-full flex flex-col gap-[12px] sm:gap-[16px] py-10">
                         <UPopover :popper="{ placement: 'bottom-start' }" class="custom_date_modal">
                           <UButton icon="i-heroicons-calendar-days-20-solid" :label="labelModal" />
                           <template #panel="{ closeDatePicker }">
-                            <LazyDatePicker v-model="dateModal" @close="closeDatePicker"/>
+                            <LazyDatePicker v-model="dateModal" @close="closeDatePicker" />
                           </template>
                         </UPopover>
                         <USelectMenu
@@ -109,8 +113,8 @@
                       </div>
                       <div class="flex flex-col justify-center items-center w-full">
                         <button
-                          @click="submitForm"
                           class="cursor-pointer transition hover:opacity-90 hover:transition-all bg-anchor text-white text-center lg:w-1/3 w-full p-4 rounded-full"
+                          @click="submitForm"
                         >
                           Submit
                         </button>
@@ -123,32 +127,38 @@
           </div>
           <div class="flex flex-col gap-[12px]">
             <div class="flex gap-[20px] justify-start items-center">
-              <h4 class="text-[24px] py-2">{{ block.booking.label_time.morning }}</h4>
-              <div class="h-px w-20 bg-secondary"></div>
+              <h4 class="text-[24px] py-2">
+                {{ block.booking.label_time.morning }}
+              </h4>
+              <div class="h-px w-20 bg-secondary" />
             </div>
             <div class="flex gap-[8px]">
               <button
                 v-for="(item, index) in block.booking.list_time_morning"
                 :key="index"
-                @click="handleButtonClick(item.time)"
                 :class="{ 'active-button': activeTime === item.time }"
-                class="transition hover:opacity-80 hover:bg-secondary hover:text-anchor hover:transition-all h-full border-[0.5px] text-secondary rounded-md p-[11px]">
+                class="transition hover:opacity-80 hover:bg-secondary hover:text-anchor hover:transition-all h-full border-[0.5px] text-secondary rounded-md p-[11px]"
+                @click="handleButtonClick(item.time)"
+              >
                 {{ item.time }}
               </button>
             </div>
           </div>
           <div class="flex flex-col gap-[12px]">
             <div class="flex gap-[20px] justify-start items-center">
-              <h4 class="text-[24px] py-2">{{ block.booking.label_time.afternoon }}</h4>
-              <div class="h-px w-20 bg-secondary"></div>
+              <h4 class="text-[24px] py-2">
+                {{ block.booking.label_time.afternoon }}
+              </h4>
+              <div class="h-px w-20 bg-secondary" />
             </div>
             <div class="grid grid-cols-4 gap-[8px]">
               <button
-                v-for="(item, index) in block.booking.list_time_afternoon" 
+                v-for="(item, index) in block.booking.list_time_afternoon"
                 :key="index"
-                @click="handleButtonClick(item.time)"
                 :class="{ 'active-button': activeTime === item.time }"
-                class="transition hover:opacity-80 hover:bg-secondary hover:text-anchor hover:transition-all h-full border-[0.5px] text-secondary rounded-md p-[11px]">
+                class="transition hover:opacity-80 hover:bg-secondary hover:text-anchor hover:transition-all h-full border-[0.5px] text-secondary rounded-md p-[11px]"
+                @click="handleButtonClick(item.time)"
+              >
                 {{ item.time }}
               </button>
             </div>
@@ -160,7 +170,9 @@
           <div class="loading-dots--dot custom_dot" />
         </div>
         <div v-else class="flex flex-col gap-[20px]">
-          <h4 class="sm:hidden block font-medium text-xl mb-2 uppercase">{{ block.appointment.title_mobile }}</h4>
+          <h4 class="sm:hidden block font-medium text-xl mb-2 uppercase">
+            {{ block.appointment.title_mobile }}
+          </h4>
           <div class="flex flex-col gap-[19px]">
             <div class="flex flex-col gap-[19px]">
               <div class="sm:flex-row flex flex-col gap-[12px]">
@@ -180,14 +192,16 @@
                   v-if="selectedStaff"
                   class="text-secondary text-[24px] h-full"
                 >
-                {{ selectedStaff.label }}
-              </p>
+                  {{ selectedStaff.label }}
+                </p>
               </div>
               <div class="w-full">
-                <p v-if="selectedService" class="text-secondary text-[20px] h-full">{{ selectedService.label }}</p>
+                <p v-if="selectedService" class="text-secondary text-[20px] h-full">
+                  {{ selectedService.label }}
+                </p>
               </div>
               <div class="w-full">
-                <div @click="openModalListAdd = true" class="relative flex justify-center w-1/4 text-center transition hover:opacity-80 hover:transition-all border-[0.5px] text-secondary rounded-full sm:py-[19px] py-[10px] text-[24px]">
+                <div class="relative flex justify-center w-1/4 text-center transition hover:opacity-80 hover:transition-all border-[0.5px] text-secondary rounded-full sm:py-[19px] py-[10px] text-[24px]" @click="openModalListAdd = true">
                   <div class="absolute w-[40px] h-[30px] bg-secondary top-[-8px] right-0 rounded-full text-anchor flex justify-center items-center text-[24px]">
                     +{{ selectedServices?.length || 0 }}
                   </div>
@@ -217,16 +231,27 @@
                       <div
                         class="flex flex-col gap-4 justify-center items-center pb-10"
                       >
-                        <h2 class="text-anchor uppercase text-2xl">List selected services</h2>
+                        <h2 class="text-anchor uppercase text-2xl">
+                          List selected services
+                        </h2>
                         <div class="w-full flex flex-col gap-6">
                           <div v-for="(selectedData, index) in selectedServices" :key="index" class="flex gap-6 justify-between items-center w-full">
                             <div class="flex flex-col gap-2 w-full">
-                              <p class="font-light text-[16px]"><span class="font-medium text-[18px]">Date:</span> {{ selectedData.date }}</p>
-                              <p class="font-light text-[16px]"><span class="font-medium text-[18px]">Staff:</span> {{ selectedData.staff }}</p>
-                              <p class="font-light text-[16px]"><span class="font-medium text-[18px]">Service:</span> {{ selectedData.service }}</p>
+                              <p class="font-light text-[16px]">
+                                <span class="font-medium text-[18px]">Date:</span>
+                                {{ selectedData?.date }}
+                              </p>
+                              <p class="font-light text-[16px]">
+                                <span class="font-medium text-[18px]">Staff:</span>
+                                {{ selectedData.staff }}
+                              </p>
+                              <p class="font-light text-[16px]">
+                                <span class="font-medium text-[18px]">Service:</span>
+                                {{ selectedData.service }}
+                              </p>
                             </div>
                             <div>
-                              <img @click="removeSelectedService(index)" src="/images/del.png" alt="" class="object-cover w-[30px] h-[30px] cursor-pointer"/>
+                              <img src="/images/del.png" alt="" class="object-cover w-[30px] h-[30px] cursor-pointer" @click="removeSelectedService(index)">
                             </div>
                           </div>
                         </div>
@@ -239,16 +264,16 @@
             <div class="flex flex-col h-full w-full gap-[19px] text-xs">
               <UForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit">
                 <UFormGroup name="name">
-                  <UInput v-model="state.name" variant="none" placeholder="Your Name ( Required )" class="custom_input rounded-full"/>
+                  <UInput v-model="state.name" variant="none" placeholder="Your Name ( Required )" class="custom_input rounded-full" />
                 </UFormGroup>
                 <UFormGroup name="phone">
-                  <UInput v-model="state.phone" variant="none" type="phone" placeholder="Your Phone ( Required )" class="custom_input rounded-full"/>
+                  <UInput v-model="state.phone" variant="none" type="phone" placeholder="Your Phone ( Required )" class="custom_input rounded-full" />
                 </UFormGroup>
                 <UFormGroup name="note">
-                  <UTextarea v-model="state.note" variant="none" type="note" placeholder="Note ( Optional ) (Max length 200 character)" class="custom_input rounded-[30px]"/>
+                  <UTextarea v-model="state.note" variant="none" type="note" placeholder="Note ( Optional ) (Max length 200 character)" class="custom_input rounded-[30px]" />
                 </UFormGroup>
                 <UButton type="submit" class="flex justify-center w-full text-center transition hover:opacity-80 hover:bg-secondary hover:text-anchor hover:transition-all border-[0.5px] text-secondary rounded-full sm:py-[19px] py-[10px]">
-                  {{block.appointment.button}}
+                  {{ block.appointment.button }}
                 </UButton>
               </UForm>
             </div>
@@ -275,9 +300,9 @@ const date = ref(new Date());
 
 const label = computed(() => date.value.toLocaleDateString('en-us', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' }));
 
-const closeDatePicker = (selectedDate:any) => {
-  date.value = selectedDate;
-};
+// const closeDatePicker = (selectedDate:any) => {
+//   date.value = selectedDate;
+// };
 
 const staffs = [{
   id: 1,
@@ -297,7 +322,7 @@ const staffChecked = ref(
   })
 );
 const selectedStaff = computed(() => {
-  return staffChecked.value.find((item) => item.label === staff.value);
+  return staffChecked.value.find((item: any) => item.label === staff.value);
 });
 
 const services = [{
@@ -322,12 +347,12 @@ const serviceChecked = ref(
   })
 );
 const selectedService = computed(() => {
-  return serviceChecked.value.find((item) => item.label === service.value);
+  return serviceChecked.value.find((item: any) => item.label === service.value);
 });
 
-const activeTime = ref(null);
+const activeTime = ref();
 const handleButtonClick = (selectedTime:AnalyserNode) => {
-    activeTime.value = selectedTime;
+  activeTime.value = selectedTime;
 }
 
 const state = reactive({
@@ -343,10 +368,10 @@ const validate = (state: any): FormError[] => {
   if (!state.note) { errors.push({ path: 'note', message: 'Required' }) }
   return errors
 }
-
+const a = ref()
 function onSubmit (event: FormSubmitEvent<any>) {
   // Do something with data
-  console.log(event.data)
+  a.value = event
 }
 
 const dateModal = ref(new Date());
@@ -357,7 +382,7 @@ const isDateSelected = ref(false);
 const isStaffSelected = ref(false);
 const isServiceSelected = ref(false);
 
-const selectedServices = ref([]);
+const selectedServices: any = ref([]);
 
 const submitForm = () => {
   isDateSelected.value = !!dateModal.value;
@@ -393,13 +418,8 @@ watch([selectedService, serviceChecked, selectedStaff, staffChecked, label, acti
 
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
-
     loading.value = false;
-
-    console.log('Data loaded successfully!');
   } catch (error) {
-    console.error('Error loading data:', error);
-
     loading.value = false;
   }
 });

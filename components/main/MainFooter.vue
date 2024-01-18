@@ -5,7 +5,7 @@
         {{ footerData.copy_right }}
       </div>
     </div>
-    <div v-show="isShowButtonToTop" class="fixed right-[33px] bottom-[141px] z-50  gap-[10px] cursor-pointer" @click="scrollToTop()">
+    <div v-show="isShowButtonToTop" class="hidden lg:block fixed right-[33px] bottom-[141px] z-50  gap-[10px] cursor-pointer" @click="scrollToTop()">
       <img :src="footerData.buttonToTop.icon" alt="icon to top" class="mx-auto mb-[10px]">
       <span class="text-black">{{ footerData.buttonToTop.label }}</span>
     </div>

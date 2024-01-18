@@ -2,7 +2,7 @@
   <section :id="block.id" :style="{ marginTop: `-${marginTop}px` }" class="section-home-banner overflow-hidden relative" :data-cms-bind="dataBinding">
     <img :src="block.banner" :alt="block.banner_alt" class="w-full h-full object-cover">
     <div class="absolute container top-0 left-1/2 -translate-x-1/2 w-full h-full">
-      <div class="button-absolute absolute bottom-[74px] right-0">
+      <div class="button-absolute absolute bottom-[74px] right-5 sm:right-0">
         <!-- <div class="button-bottom" @click="handleRouter(background, block.button.url)">
           <span class="bg-secondary">{{ block.button.text }}</span>
         </div>

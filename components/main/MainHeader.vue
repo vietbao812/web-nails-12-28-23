@@ -10,7 +10,7 @@
         <div class="custom_hover_block hidden">
           <ul class="flex items-center gap-[10px]">
             <li v-for="(nav, index) in headerData.nav" :key="index" :class="isActiveMenuItem(nav.link) ? 'active' : ''" class="custom_hover_active relative">
-              <div v-if="isActiveMenuItem(nav.link)" class="absolute right-2 w-[6px] h-[6px] bg-secondary rounded-full"></div>
+              <div v-if="isActiveMenuItem(nav.link)" class="absolute right-2 w-[6px] h-[6px] bg-secondary rounded-full" />
               <NuxtLink :to="nav.link">
                 {{ nav.text }}
               </NuxtLink>

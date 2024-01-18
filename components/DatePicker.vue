@@ -43,5 +43,9 @@ const attrs = [{
     :first-day-of-week="2"
   />
 </template>
-<style scoped>
+
+<style lang="scss" scoped>
+// h1 {
+//   color: red;
+// }
 </style>
