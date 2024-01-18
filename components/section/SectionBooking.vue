@@ -126,7 +126,7 @@
               <h4 class="text-[24px] py-2">{{ block.booking.label_time.morning }}</h4>
               <div class="h-px w-20 bg-secondary"></div>
             </div>
-            <div class="flex gap-[8px]">
+            <div class="grid grid-cols-4 gap-[8px]">
               <button
                 v-for="(item, index) in block.booking.list_time_morning"
                 :key="index"
@@ -144,7 +144,7 @@
             </div>
             <div class="grid grid-cols-4 gap-[8px]">
               <button
-                v-for="(item, index) in block.booking.list_time_afternoon" 
+                v-for="(item, index) in block.booking.list_time_afternoon"
                 :key="index"
                 @click="handleButtonClick(item.time)"
                 :class="{ 'active-button': activeTime === item.time }"
@@ -327,7 +327,7 @@ const selectedService = computed(() => {
 
 const activeTime = ref(null);
 const handleButtonClick = (selectedTime:AnalyserNode) => {
-    activeTime.value = selectedTime;
+  activeTime.value = selectedTime;
 }
 
 const state = reactive({
@@ -390,16 +390,12 @@ const loading = ref(false);
 
 watch([selectedService, serviceChecked, selectedStaff, staffChecked, label, activeTime], async () => {
   loading.value = true;
-
   try {
     await new Promise(resolve => setTimeout(resolve, 1000));
-
     loading.value = false;
-
     console.log('Data loaded successfully!');
   } catch (error) {
     console.error('Error loading data:', error);
-
     loading.value = false;
   }
 });
